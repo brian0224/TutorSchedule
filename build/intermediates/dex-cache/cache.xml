@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\cf67300f0330cd7347178cb92acef0c195db1407\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_58324f73a53f5c2b9d357ef9c50ec660a9d2c956\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\40d29874020aba91473dc0603024503c0ca6a01b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a0fccad736d1a83a4c20195c1c2b8c453b4a774c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\9bdac973aa90d2947131c1eefa62a7f69ad12aba\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2c8cd5c662f912e9d0fc48467710e00d7886db7e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\8f5dd341c53de084703b6a29f90abf03bb9b9b2d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_659f955436bf61429119dc5f33a0b69ac3ab22af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_62fad4c29b91a7178c315bf6fbbb31c3b16405ab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\4e4370422fb2ee55093222b68f4b251473cd4224\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b4fe3d523b0cf10affa9ca489efef77937214ce1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_74fcbb95f1d59880b0039153011db94f90127380\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\548e034e26ed3e7ae4e9c8b1da0b255142b98fb0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e62480bf524b1ce30152038a3c90cbbdee9f8ae8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\3c55e13f7c4628e91687ccb95c50562145cfbbb4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3bd4b10be4c860e6259c922d51bbd0d076aa630d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3ba8fb20de92b46ee25412670367f3cd8d8165f3">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_13592a282028e1f42228dbad2290a0723cdaed02\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\4e6153d1fb930e94002ee881509d2fa19e38d5cd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fd2c6418e1e084a61ac905668b40196629d4ba9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\viquan108\.android\build-cache\c983f51cd22047dd1e26bc78c451b89970acafb5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1268d99138a084c919d715439536db1229f43dc3\classes.dex" />
+    </item>
+
+</items>
