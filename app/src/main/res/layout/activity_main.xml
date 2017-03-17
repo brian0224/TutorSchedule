@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/background"
+    android:background="@drawable/utd"
     tools:context="com.deitel.studymatch.MainActivity">
 
     <TextView
@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:id="@+id/radiogroup"
         android:layout_below="@id/studymatch">
 
         <RadioButton
@@ -50,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/background"
+        android:background="@null"
+        android:textColor="@color/white"
 
         android:text="help"
         android:id="@+id/help"
@@ -61,7 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/help"
-        android:background="@color/background"
+        android:background="@null"
+        android:textColor= "@color/white"
 
         android:text="About us"
         android:id="@+id/aboutus"
@@ -72,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@id/help"
-        android:background="@color/background"
+        android:background="@null"
+        android:textColor= "@color/white"
 
         android:text="Contact us"
         android:id="@+id/contactus"
@@ -84,7 +88,8 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/help"
         android:layout_margin="@dimen/activity_horizontal_margin"
-        android:background="@color/background"
+        android:background="@drawable/border"
+        android:textColor="@color/white"
 
         android:text="Create new Account"
         android:id="@+id/CreateAccountButton"
@@ -93,25 +98,29 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/CreateAccountButton"
-        android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@color/ivory"
+
+        android:layout_below="@+id/facebookButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
 
         android:text="Login with Gmail"
         android:id="@+id/gmailButton"
         />
 
-    <Button
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebookButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/gmailButton"
-        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/radiogroup"
+        android:layout_marginBottom="40dp"
+
         android:background="@color/colorPrimary"
 
-        android:text="Login with Facebook"
-        android:id="@+id/facebookButton"
-        />
+        android:padding="15dp"
+
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="Login with Facebook" />
 
 </RelativeLayout>
