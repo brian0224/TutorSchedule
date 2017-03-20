@@ -3,6 +3,7 @@ package com.deitel.studymatch;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,41 +24,41 @@ import static com.facebook.FacebookSdk.getApplicationContext;
  * Created by Brian on 3/17/2017.
  */
 
-public class FacebookFragment extends Fragment {
+public class FacebookFragment extends AppCompatActivity {
 
-    private TextView mTextDetail;
+    TextView textView;
+    LoginButton loginButton;
+    CallbackManager mCallbackManager;
 
-    private CallbackManager mCallbackManager;
-    private FacebookCallback <LoginResult> mCallback = new FacebookCallback<LoginResult>() {
-        @Override
-        public void onSuccess(LoginResult loginResult) {
-            AccessToken accessToken = loginResult.getAccessToken();
-            Profile profile = Profile.getCurrentProfile();
-            if (profile != null)
-                mTextDetail.setText("Welcome" + profile.getName());
 
-        }
 
-        @Override
-        public void onCancel() {
-
-        }
-
-        @Override
-        public void onError(FacebookException error) {
-
-        }
-    };
-
-    public FacebookFragment()
-    {
-
-    }
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        setContentView (R.layout.activity_main);
+        loginButton = (LoginButton) findViewById (R.id.facebookButton);
+
         mCallbackManager = CallbackManager.Factory.create();
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                textView.setText("Login Sucess\n" +
+                        loginResult.getAccessToken().getUserId()+
+                        "\n"+ loginResult.getAccessToken().getToken());
+            }
+
+            @Override
+            public void onCancel() {
+                textView.setText("Login Cancelled");
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
+
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -65,15 +66,7 @@ public class FacebookFragment extends Fragment {
         return inflater.inflate(R.layout.activity_main, container, false);
     }
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState)
-    {
-        super.onViewCreated(view, savedInstanceState);
-        LoginButton loginButton = (LoginButton) view.findViewById(R.id.facebookButton);
-        loginButton.setReadPermissions("user_friends");
-        loginButton.setFragment(this);
-        loginButton.registerCallback(mCallbackManager,mCallback);
-    }
+
 
     @Override
     public void onActivityResult (int requestCode, int resultCode, Intent data)
