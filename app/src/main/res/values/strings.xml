@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">StudyMatch</string>
     <string name="app_id">1863580523930447</string>
+
+    <string name="studentlogin">Student login</string>
+    <string name="tutorlogin">Tutor login</string>
+    <string name="help">Help</string>
+    <string name="contactus">Contact us</string>
+    <string name="aboutus">About us</string>
+    <string name="createNewAccount">Create new Account</string>
+    <string name="loginWithGmail">Login with Gmail</string>
 </resources>
