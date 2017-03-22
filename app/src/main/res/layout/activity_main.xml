@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/utd"
+    android:background="@drawable/utd1"
     tools:context="com.deitel.studymatch.MainActivity">
 
     <TextView
@@ -25,22 +25,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+
         android:id="@+id/radiogroup"
         android:layout_below="@id/studymatch">
 
         <RadioButton
-            android:id="@+id/studentLogin"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:checked="true"
+
+            android:id="@+id/studentLogin"
             android:text="Student Login" />
 
         <RadioButton
-            android:id="@+id/tutorLogin"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
+
+            android:id="@+id/tutorLogin"
             android:text="Tutor Login" />
 
     </RadioGroup>
@@ -68,7 +69,8 @@
 
         android:text="About us"
         android:id="@+id/aboutus"
-        />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="120dp"
@@ -80,14 +82,14 @@
 
         android:text="Contact us"
         android:id="@+id/contactus"
-        />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/help"
-        android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@drawable/border"
         android:textColor="@color/white"
 
