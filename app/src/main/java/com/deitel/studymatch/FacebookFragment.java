@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,40 +40,41 @@ public class FacebookFragment extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView (R.layout.activity_main);
         loginButton = (LoginButton) findViewById (R.id.facebookButton);
-
+        textView =(TextView) findViewById(R.id.studymatch);
         mCallbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+
             @Override
             public void onSuccess(LoginResult loginResult) {
-                textView.setText("Login Sucess\n" +
+                textView.setText("Welcome" +
                         loginResult.getAccessToken().getUserId()+
                         "\n"+ loginResult.getAccessToken().getToken());
+                Log.i("debug:","begin");
             }
 
             @Override
             public void onCancel() {
                 textView.setText("Login Cancelled");
+                Log.i("debug:","cancel");
             }
 
             @Override
             public void onError(FacebookException error) {
-
+                textView.setText("error");
+                Log.i("debug:","error");
             }
         });
 
     }
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
-        return inflater.inflate(R.layout.activity_main, container, false);
-    }
+
 
 
 
     @Override
     public void onActivityResult (int requestCode, int resultCode, Intent data)
     {
-        super.onActivityResult(requestCode, resultCode, data);
+
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
