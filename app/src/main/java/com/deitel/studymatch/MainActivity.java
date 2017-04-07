@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView textView;
         textView =(TextView) findViewById(R.id.studymatch);
+        FacebookFragment facebookfrag = new FacebookFragment();
 
         aboutusConnection();
         helpConnection();
