@@ -3,18 +3,29 @@ package com.deitel.studymatch;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 
 
 public class MainActivity extends AppCompatActivity {
+    TextView studymatch;
+    LoginButton loginButton;
+    CallbackManager mCallbackManager;
     //connect to Aboutus
     public Button aboutus;
+
     public void aboutusConnection()
     {
         aboutus = (Button)findViewById(R.id.aboutus);
@@ -29,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //connect to help
+
     public Button help;
 
     public void helpConnection()
@@ -61,7 +73,66 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /*connect to facebook
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        setContentView(R.layout.activity_main);
+
+        aboutusConnection();
+        helpConnection();
+        contactConnection();
+        InitializeControl();
+        loginWithFB();     //facebookConnection();
+
+        //This is a comment by Peter Tran.
+
+    }
+
+    private void InitializeControl() {
+
+        studymatch = (TextView) findViewById(R.id.studymatch);
+        loginButton = (LoginButton) findViewById(R.id.facebookButton);
+        mCallbackManager = CallbackManager.Factory.create();
+        Log.d("Status:","initialized" );
+    }
+
+    private void loginWithFB()
+    {
+        Log.d("Status:","login begin" );
+        LoginManager.getInstance().registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d("Status:","login 1" );
+                studymatch.setText("Welcome" +
+                        loginResult.getAccessToken().getUserId()+
+                        "\n"+ loginResult.getAccessToken().getToken());
+                Intent aboutusact = new Intent(MainActivity.this, Aboutus_activities.class);
+                startActivity(aboutusact);
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d("Status:","login 2" );
+                studymatch.setText("Login Cancelled");
+                //Toast.makeText(getApplicationContext(), R.string.cancel_login, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d("Status:","login 3" );
+                studymatch.setText("error" + error.getMessage() );
+                // Toast.makeText(getApplicationContext(),R.string.error_login, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Log.d("Status:","login end" );
+    }
+}
+
+
+    /*
+    connect to facebook
     public Button facebookButton;
 
     public void facebookConnection()
@@ -76,23 +147,3 @@ public class MainActivity extends AppCompatActivity {
         }));
     }
 */
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        TextView textView;
-        textView =(TextView) findViewById(R.id.studymatch);
-        FacebookFragment facebookfrag = new FacebookFragment();
-
-        aboutusConnection();
-        helpConnection();
-        contactConnection();
-
-        //facebookConnection();
-
-        //This is a comment by Peter Tran.
-
-    }
-}

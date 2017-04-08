@@ -39,11 +39,14 @@ public class FacebookFragment extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView (R.layout.activity_main);
+        /*
 
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
         studymatch = (TextView) findViewById(R.id.studymatch);
         loginButton = (LoginButton) findViewById (R.id.facebookButton);
 
@@ -75,6 +78,8 @@ public class FacebookFragment extends AppCompatActivity {
                // Toast.makeText(getApplicationContext(),R.string.error_login, Toast.LENGTH_SHORT).show();
             }
         });
+
+        */
 
     }
 
