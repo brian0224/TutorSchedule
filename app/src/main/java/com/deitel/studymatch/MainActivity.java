@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 studymatch.setText("Welcome" +
                         loginResult.getAccessToken().getUserId()+
                         "\n"+ loginResult.getAccessToken().getToken());
-                Intent aboutusact = new Intent(MainActivity.this, Aboutus_activities.class);
+                Intent aboutusact = new Intent(MainActivity.this, tuitorsearch_activities.class);
                 startActivity(aboutusact);
             }
 
@@ -127,6 +127,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.d("Status:","login end" );
+    }
+    @Override
+    public void onActivityResult (int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }
 
