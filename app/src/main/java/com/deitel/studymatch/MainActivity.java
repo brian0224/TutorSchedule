@@ -82,9 +82,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView;
-        textView =(TextView) findViewById(R.id.studymatch);
-        FacebookFragment facebookfrag = new FacebookFragment();
+
+
 
         aboutusConnection();
         helpConnection();
