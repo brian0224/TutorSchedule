@@ -34,10 +34,13 @@
         <activity android:name=".help_activities" />
         <activity android:name=".contactus_activities" />
         <activity
+            android:name=".createaccount_activities"
+            android:label="@string/title_activity_createaccount_activities"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".tuitorsearch_activities"
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_tuitorsearch_activities"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

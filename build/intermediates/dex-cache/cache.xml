@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Brian\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f3d9304a8dfd12b910008aecc66672f7495ccbec">
+        <dex dex="C:\Users\Brian\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3adda91dfd3a7f91c9da267666df72837847152b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Brian\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_74fcbb95f1d59880b0039153011db94f90127380\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c5ec7a7224f0411b17e20dc5056fde78eaa88ccf">
-        <dex dex="C:\Users\viquan108\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_13592a282028e1f42228dbad2290a0723cdaed02\classes.dex" />
+        <dex dex="C:\Users\Brian\AndroidStudioProjects\TutorSchedule\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3197caf24fee497139295fd02806413e5554a8d9\classes.dex" />
     </item>
 
 </items>

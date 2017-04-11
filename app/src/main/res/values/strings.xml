@@ -9,8 +9,8 @@
     <string name="aboutus">About us</string>
     <string name="createNewAccount">Create new Account</string>
     <string name="loginWithGmail">Login with Gmail</string>
-
+    <string name="login">Login</string>
     <string name="title_activity_tuitorsearch_activities">TuitorSearch</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_createaccount_activities">createaccount_activities</string>
 </resources>

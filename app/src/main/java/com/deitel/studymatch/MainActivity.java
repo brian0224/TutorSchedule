@@ -56,6 +56,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //connect to create new account
+    public Button CreateAccountButton;
+
+    public void createaccountConnection()
+    {
+        CreateAccountButton = (Button)findViewById(R.id.CreateAccountButton);
+        CreateAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createact = new Intent(MainActivity.this, createaccount_activities.class);
+                startActivity(createact);
+            }
+        });
+    }
+
+
     //connect to contactus
     public Button contactus;
 
@@ -84,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         contactConnection();
         InitializeControl();
         loginWithFB();     //facebookConnection();
-
+        createaccountConnection();
         //This is a comment by Peter Tran.
 
     }
@@ -104,9 +120,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d("Status:","login 1" );
-                studymatch.setText("Welcome" +
-                        loginResult.getAccessToken().getUserId()+
-                        "\n"+ loginResult.getAccessToken().getToken());
+                studymatch.setText("Welcome to StudyMatch");
                 Intent aboutusact = new Intent(MainActivity.this, tuitorsearch_activities.class);
                 startActivity(aboutusact);
             }
@@ -121,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(FacebookException error) {
                 Log.d("Status:","login 3" );
-                studymatch.setText("error" + error.getMessage() );
+                studymatch.setText("error, try to reconnect again");
                 // Toast.makeText(getApplicationContext(),R.string.error_login, Toast.LENGTH_SHORT).show();
             }
         });
